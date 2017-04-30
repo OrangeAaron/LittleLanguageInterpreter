@@ -1,0 +1,22 @@
+////<program> ::= <stmtList>   # A program is a list of statements 
+////<stmtlist> ::= { <stmt> }  # A list of statements is zero or more statements
+<stmt> ::= <if> | <while>  # A statement is one of six types 
+      | <block> |  <assign> | <print> | <read>
+
+
+////<if> ::= if <cond> then <stmt> [ else <stmt> ] 
+////<while> ::= while <cond> do <stmtlist> end 
+
+
+////<block> ::= /{ <stmtlist>/} 
+
+////<print> ::= print <exp> {, <exp> }
+////<read> ::= read <id> {, <id> }
+!!!!<cond> ::= <exp>
+////<assign> ::= <id> := <exp> 
+////<factor> ::= <No> | <id> | ( <exp> ) 
+////<No> ::= {<addop>} <no> 
+////<exp> ::= <term> { <addop> <term> }
+////<term> ::= <factor> { <multop> <factor> }
+<addop> ::= + | -
+<multop> ::= * | /
